@@ -12,7 +12,7 @@ const addSecond = () => {
   return { type: ADD_SECOND };
 };
 
-const TIMER_DURATION = 1500;
+const TIMER_DURATION = 600;
 const initialState = {
   isPlaying: false,
   elapsedTime: 0,
@@ -55,6 +55,7 @@ const applyAddSecond = (state) => {
   } else {
     return {
       ...state,
+      elapsedTime: 0,
       isPlaying: false,
     };
   }

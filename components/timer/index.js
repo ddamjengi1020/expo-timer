@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     startTimer: () => dispatch(actionCreators.startTimer()),
     restartTimer: () => dispatch(actionCreators.restartTimer()),
+    addSecond: () => dispatch(actionCreators.addSecond()),
   };
 };
 
