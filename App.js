@@ -1,6 +1,16 @@
 import React from "react";
-import Timer from "./components/timer";
+import Timer from "./components/Timer";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "./store";
 
-export default function App() {
-  return <Timer />;
+const store = createStore(reducer);
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Timer />
+      </Provider>
+    );
+  }
 }
